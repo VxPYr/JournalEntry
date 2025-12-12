@@ -5,9 +5,9 @@ import net.engineeringdigest.journalApp.repository.JournalEntryRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class JournalEntryService {
@@ -21,6 +21,18 @@ public class JournalEntryService {
 
     public List<JournalEntry> getAllJournalEntry() {
         return journalEntryRepository.findAll();
+    }
+
+    public Optional<JournalEntry> getJournalEntryById(ObjectId id) {
+        return journalEntryRepository.findById(id);
+    }
+
+    public void deleteJournalEntryById(ObjectId id) {
+        journalEntryRepository.deleteById(id);
+    }
+
+    public JournalEntry updateJournalEntry(JournalEntry journalEntry) {
+        return journalEntryRepository.save(journalEntry);
     }
 
 }
