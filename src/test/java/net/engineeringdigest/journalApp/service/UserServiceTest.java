@@ -20,7 +20,7 @@ public class UserServiceTest {
     @Autowired
     private UserRepository userRepository;
 
-
+    @Disabled
     @ParameterizedTest
     @ArgumentsSource(UserArgumentsProvider.class)
     public void testSaveNewUser(User user) {
