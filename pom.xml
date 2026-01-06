@@ -48,7 +48,18 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.7.0.1746</version>
+			</plugin>
 		</plugins>
 	</build>
 
 </project>
+
+
+
+
+
+<!--		mvn clean verify sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=squ_15527a795a3b4c0a03e33487fc57edb85a34df86-->
